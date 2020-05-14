@@ -1,0 +1,65 @@
+//= template/header.html
+<div class="container">
+    <section class="contacts">
+        <h1 class="contacts__title">Контакты</h1>
+        <div class="contacts__inf d-flex">
+            <div class="contacts__adress">
+                <p class="contacts__label slides__label">Адрес</p>
+                <p class="contacts__adress-text">Санкт-Петербург, Новомалиновская дорога, 6</p>
+                <p class="contacts__adress-text">Работаем ежедневно с 9:00 до 22:00</p>
+            </div>
+            <div class="contacts__tel d-flex">
+                <p class="contacts__label slides__label">Телефон</p>
+                <a href="tel:7(812)3193665" class="contacts__phone phone">+7(812)319-36-65</a>
+                <a href="#" class="header__link">Перезвоните мне</a>
+
+            </div>
+        </div>
+        <div id="map" class="contacts__map" ></div>
+          
+        <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+        <script type="text/javascript">
+        ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.893082, 30.447311],
+            controls: ['zoomControl'],
+            zoom: 11
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+        
+        myPlacemark = new ymaps.Placemark([59.949019, 30.448936], {
+            hintContent: '',
+            balloonContent: ''
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/icons/icn_marker.svg',
+            // Размеры метки.
+            iconImageSize: [50, 50],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+        
+        myMap.behaviors.disable('scrollZoom');
+    myMap.geoObjects
+        .add(myPlacemark)
+        
+});
+      
+            </script>
+           
+
+    </section>
+</div>
+
+//= template/footer.html
