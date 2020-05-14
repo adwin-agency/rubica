@@ -52,6 +52,99 @@ function owlCarouselSlider(owlSlider) {
 
 }
 
+
+function owlCarouselSliderProd(owlSlider) {
+
+    if ($(owlSlider).length > 0) {
+
+        $(owlSlider).owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            slideBy: 1,
+            items: 1,
+            lazyLoad: true,
+            responsive: {
+                310: {
+                    items: 3
+                },
+
+                480: {
+                    items: 3
+                },
+
+                767: {
+                    items: 3
+                },
+
+                989: {
+                    items: 3
+                },
+
+                1280: {
+                    items: 3
+                },
+
+                1300: {
+                    items: 3
+                }
+            }
+        });
+
+    }
+
+}
+
+function owlCarouselSliderGoods(owlSlider) {
+
+    if ($(owlSlider).length > 0) {
+
+        $(owlSlider).owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            slideBy: 1,
+            items: 1,
+            lazyLoad: true,
+            responsive: {
+                310: {
+                    items: 1
+                },
+
+                480: {
+                    items: 1
+                },
+
+                767: {
+                    items: 1
+                },
+
+                989: {
+                    items: 1
+                },
+
+                1280: {
+                    items: 1
+                },
+
+                1300: {
+                    items: 1
+                }
+            }
+        });
+
+    }
+
+}
+
+
+
+
+
 function setCaretPosition(e, t) {
     if (e.setSelectionRange) e.focus(), e.setSelectionRange(t, t);
     else if (e.createTextRange) {
@@ -131,5 +224,10 @@ function inputmask() {
 $(function() {
 
     owlCarouselSlider('.promo-carousel-js');
+    owlCarouselSliderProd('.prod-slider__carousel-js');
+    owlCarouselSliderGoods('.goods__item-slider-js');
+    
 
 });
+
+
