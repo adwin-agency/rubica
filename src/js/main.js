@@ -140,7 +140,72 @@ function owlCarouselSliderGoods(owlSlider) {
     }
 
 }
+function owlCarouselSliderProduct(owlSlider) {
 
+    if ($(owlSlider).length > 0) {
+
+        $(owlSlider).owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            slideBy: 1,
+            items: 1,
+            lazyLoad: true,
+            onInitialized : pagen,
+            onChange: counter,
+            
+         
+
+            responsive: {
+                310: {
+                    items: 1
+                },
+
+                480: {
+                    items: 1
+                },
+
+                767: {
+                    items: 1
+                },
+
+                989: {
+                    items: 1
+                },
+
+                1280: {
+                    items: 1
+                },
+
+                1300: {
+                    items: 1
+                }
+            }
+        });
+
+
+        function pagen(event){
+            
+                $('.owl-prev').after("<div class='slider-pagen d-flex'>1/" + event.item.count+"</div>")
+                
+        }
+
+        function counter(event) {
+            
+             var items     = event.item.count;     // Number of items
+             var item      = event.item.index;     // Position of the current item
+           
+           // it loop is true then reset counter from 1
+           if(item > items) {
+            item = item - items;
+          }
+           $('.slider-pagen').html(item+"/"+items);
+         }
+    }
+
+}
 
 
 
@@ -226,7 +291,9 @@ $(function() {
     owlCarouselSlider('.promo-carousel-js');
     owlCarouselSliderProd('.prod-slider__carousel-js');
     owlCarouselSliderGoods('.goods__item-slider-js');
+    owlCarouselSliderProduct('.product__item-slider-js');
     
+   
 
 });
 
