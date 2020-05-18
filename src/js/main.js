@@ -298,3 +298,57 @@ $(function() {
 });
 
 
+jQuery( document ).ready(function( $ ) {
+    var
+   
+      $window = $( window ), 
+ 
+      $target = $( "#fixed-scroll-js" ),
+ 
+      $bottom = $( '#end-scroll-js' ), 
+ 
+      $top = $target.offset().top, 
+ 
+      $height = $target.outerHeight(), 
+
+        $left = $('.product').offset().left + $('.product').outerWidth(),
+
+       $bot = $bottom.offset().top + $bottom.outerHeight();
+       
+   
+    $window.on('scroll', function() {
+   
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > $top  && scrollTop + $height < $bot) {
+   
+        
+        $target.css( {     
+            position : 'fixed',
+            top : '10px',     
+            left : $left + 'px',
+        } );
+    } 
+
+        else if ( scrollTop > $top && scrollTop + $height > $bot ) {
+ 
+            // Координата верха: куда нельзя заходить - минус верх - минус высота блока
+            var top = $bot - scrollTop - $height;
+ 
+            $target.css( {
+                
+                top : top ,
+            } );
+        }
+   
+      // Иначе возвращаем всё назад
+      else {     
+   
+        $target.css( {     
+            position : 'relative',
+            top : '',     
+            left : '',
+        } );
+      }
+    });
+});   

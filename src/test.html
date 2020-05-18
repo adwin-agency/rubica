@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/SegoeUI.css">
-    <link rel="stylesheet" href="css/main.css">
-    
-    <title>rubika</title>
-    <!-- Tweaks for older IEs-->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-</head>
-
-<body>
-    <div class="wrapper wrapper-main">
-        <header class="header">
-            <div class="header__container container">
-                <div class="header__grid d-flex">
-                    <a href="#" class="header__logo logo">
-                        <img src="/svg/Rubi-Logo.svg" alt="" class="logo__image">
-                    </a>
-                    <nav class="header__nav nav d-flex">
-                        <ul class="header__menu menu d-flex">
-                            <li class="menu__item">
-                                <a href="#" class="menu__link menu__link_active">Кухни</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Производство</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Доставка и монтаж</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Оплата</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#" class="menu__link">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="header__contacts d-flex">
-                        <p class="header__city city">Санкт-Петербург</p>
-                        <a href="tel:7(812)3193665" class="header__phone phone">+7(812)319-36-65</a>
-                        <a href="#" class="header__link">Перезвоните мне</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+//= template/header.html
 <main class="main">
     <div class="container d-flex">
         <div class="product">
@@ -158,70 +105,6 @@
                 </ul>
             </div>
 
-           
-
-
-        </div>
-        <div class="product-info" id="fixed-scroll-js">
-            <div class="product-info__top">
-                <h1 class="product-info__header">
-                    Лори
-                </h1>
-                <p class="product-info__text">Стоимость всего гарнитура</p>
-                <p class="product-info__price">49 850 ₽</p>
-                <p class="product-info__old-price"><s>79 900 ₽</s><span class="product-info__discount">-30%</span></p>
-                <p class="product-info__offer">7 500 ₽/мес. в рассрочку</p>
-                <button class="product-info__btn btn btn-bg btn-bg-blue">Рассчитать по моим размерам</button>
-            </div>
-            <div class="product-info__bottom">
-                <ul class="product-info__benefits">
-                    <li class="product-info__benefits-item d-flex">
-                        <div class="product-info__benefits-item-img d-flex">
-                            <img src="img/icons/emoji_happy_circle.svg">
-                        </div>
-                        <p class="product-info__benefits-item-text">
-                            Выезд дизайнера и 3д-проект бесплатно
-                        </p>
-                    </li>
-                    <li class="product-info__benefits-item d-flex">
-                        <div class="product-info__benefits-item-img d-flex">
-                            <img src="img/icons/watch.svg">
-                        </div>
-                        <p class="product-info__benefits-item-text">
-                            Срочная кухня за 14 дней
-                        </p>
-                    </li>
-                    <li class="product-info__benefits-item d-flex">
-                        <div class="product-info__benefits-item-img d-flex">
-                            <img src="img/icons/home.svg">
-                        </div>
-                        <p class="product-info__benefits-item-text">
-                            Сборка и установка в один день
-                        </p>
-                    </li>
-                    <li class="product-info__benefits-item d-flex">
-                        <div class="product-info__benefits-item-img d-flex">
-                            <img src="img/icons/rub.svg">
-                        </div>
-                        <p class="product-info__benefits-item-text">
-                            Рассрочка 0%
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-           
-
-
-        </div>
-
-    </div>
-</main>
-<div class="wrapper wrapper-main wrapper_black" >
-    <main class="main">
-        <div class="conainer">
-        <div class="product">
             <div class="product__parts">
                 <h2 class="product__parts-header">
                     Купите всё в одном месте
@@ -270,15 +153,8 @@
                 </ul>
             </div>
 
-</div>
-</div>
-</main>
-</div>
-<div class="wrapper wrapper-main">
-    <main class="main">
-        <div class="conainer">
-        <div class="product">
-            <div class="product__about" id="end-scroll-js">
+
+            <div class="product__about" id="stepper">
                 <div class="product__about-info about__info d-flex ">
                 <p class="about__label slides__label">О нас</p>
                 <h2 class="about__title title title_h2 title_color-white">Используем с умом каждый<br> сантиметр пространства</h2>
@@ -290,9 +166,64 @@
                     <a href="#" class="product__about-btn btn btn-bg .btn-br btn-br-white">Готовые решения</a>
                 </div>
             </div></div>
+
+
+        </div>
+        <div class="product-info" id="fixed_scroll">
+            <div class="product-info__top">
+                <h1 class="product-info__header">
+                    Лори
+                </h1>
+                <p class="product-info__text">Стоимость всего гарнитура</p>
+                <p class="product-info__price">49 850 ₽</p>
+                <p class="product-info__old-price"><s>79 900 ₽</s><span class="product-info__discount">-30%</span></p>
+                <p class="product-info__offer">7 500 ₽/мес. в рассрочку</p>
+                <button class="product-info__btn btn btn-bg btn-bg-blue">Рассчитать по моим размерам</button>
+            </div>
+            <div class="product-info__bottom">
+                <ul class="product-info__benefits">
+                    <li class="product-info__benefits-item d-flex">
+                        <div class="product-info__benefits-item-img d-flex">
+                            <img src="img/icons/emoji_happy_circle.svg">
+                        </div>
+                        <p class="product-info__benefits-item-text">
+                            Выезд дизайнера и 3д-проект бесплатно
+                        </p>
+                    </li>
+                    <li class="product-info__benefits-item d-flex">
+                        <div class="product-info__benefits-item-img d-flex">
+                            <img src="img/icons/watch.svg">
+                        </div>
+                        <p class="product-info__benefits-item-text">
+                            Срочная кухня за 14 дней
+                        </p>
+                    </li>
+                    <li class="product-info__benefits-item d-flex">
+                        <div class="product-info__benefits-item-img d-flex">
+                            <img src="img/icons/home.svg">
+                        </div>
+                        <p class="product-info__benefits-item-text">
+                            Сборка и установка в один день
+                        </p>
+                    </li>
+                    <li class="product-info__benefits-item d-flex">
+                        <div class="product-info__benefits-item-img d-flex">
+                            <img src="img/icons/rub.svg">
+                        </div>
+                        <p class="product-info__benefits-item-text">
+                            Рассрочка 0%
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+           
+
+            
             
 </div>
-
+    </div>
+    <div class="conainer">
 <div class="stepper"  >
     <h2 class="stepper__header">Как проходит работа?</h2>
     <ul class="stepper__list d-flex">
@@ -392,59 +323,4 @@
 </div>
 
 
-<footer class="footer">
-    <div class="footer__container container">
-        <div class="footer__top d-flex">
-            <nav class="footer__nav nav d-flex">
-                <ul class="footer__menu menu d-flex">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Кухни</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Производство</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Умные решения</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Доставка и монтаж</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Оплата</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="footer__contacts d-flex">
-                <p class="footer__city city">Санкт-Петербург</p>
-                <a href="#" class="footer__phone phone">+7(812)319-36-65</a>
-            </div>
-            <a href="#" class="footer__btn btn btn-bg btn-bg-blue">Пригласить Дизайнера</a>
-        </div>
-        <div class="footer__bottom d-flex">
-            <p class="footer__copy">© 2020 RUBICA</p>
-            <a href="#" class="footer__policy">Политика обработки данных и публичная оферта</a>
-            <ul class="footer__payment payment-list">
-                <li class="payment-list__element">
-                    <img src="" alt="" class="payment-list__image">
-                </li>
-                <li class="payment-list__element">
-                    <img src="" alt="" class="payment-list__image">
-                </li>
-                <li class="payment-list__element">
-                    <img src="" alt="" class="payment-list__image">
-                </li>
-                <li class="payment-list__element">
-                    <img src="" alt="" class="payment-list__image">
-                </li>
-            </ul>
-        </div>
-    </div>
-</footer>
-</div>
-<script src="js/main.js"></script>
-</body>
-
-</html>
+//= template/footer.html
