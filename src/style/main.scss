@@ -2113,3 +2113,69 @@ li {
                 margin-top: 0px;
     }
 }
+
+/*delivery*/
+
+.delivery{
+    &__banner{
+        background-image: url(../img/delivery/delivery-banner.jpg);
+        height: 350px;
+        padding: 100px 0 0 80px;
+
+        &-header{
+            color: white;
+
+            & span{
+                color:#b4e13d;
+            }
+        }
+    }
+    &__info{
+        padding: 0 100px;
+        margin-top: -115px;
+
+        &-list{
+            justify-content: space-between;
+        }
+
+        &-item{
+            max-width: 660px;
+            padding: 35px 60px 55px 60px;
+
+            &_bg-blue{
+                background-color: #021a76;
+                color: white;
+
+            }
+            &_bg-blue &-header{
+                color: white;
+            }
+
+            &_bg-white{
+                background-color: white;
+                
+            }
+            &-header{
+                margin-bottom: 25px;
+                &::after{
+                    content:"";
+                    width: 100px;
+                    height: 5px;
+                    background-color: #b4e13d;
+                    display: block;
+                    margin-top: 25px;
+                }
+            }
+            &-text{
+                line-height: 30px;
+                margin-bottom: 25px;
+            }
+
+            &-link{
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
