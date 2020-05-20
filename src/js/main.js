@@ -292,6 +292,7 @@ $(function() {
     owlCarouselSliderProd('.prod-slider__carousel-js');
     owlCarouselSliderGoods('.goods__item-slider-js');
     owlCarouselSliderProduct('.product__item-slider-js');
+    owlCarouselSliderGoods('.ideas-slider-js');
     
    
 
