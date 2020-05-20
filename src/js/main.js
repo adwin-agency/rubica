@@ -1,5 +1,7 @@
 //= ../../bower_components/jquery/dist/jquery.min.js
 //= ../../bower_components/owl.carousel/dist/owl.carousel.js
+//= ../../bower_components/fullpage.js/dist/fullpage.js
+//= ../../bower_components/swiper/package/js/swiper.min.js
 
 
 
@@ -7,6 +9,31 @@
 
 //= partials/lazyload.js
 
+var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: false,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      bulletActiveClass: 'bullet-active',
+      bulletClass: 'swiper-bullet',
+      renderBullet: function (index, className) {
+        return '<span class="'+ className +'">' + (index+1) +'</span>'+ "<span class='bullet-line'></span>";},
+    },
+
+    mousewheel: {
+        invert: false,
+      },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+
+  mySwiper.pagination.bullets[1]
 function owlCarouselSlider(owlSlider) {
 
     if ($(owlSlider).length > 0) {
