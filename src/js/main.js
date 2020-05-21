@@ -8,12 +8,12 @@
 "use strict";
 
 //= partials/lazyload.js
-
+/*вертикальный скролл на главной*/
 var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     direction: 'vertical',
     loop: false,
-
+    speed: 1000,
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
@@ -27,13 +27,9 @@ var mySwiper = new Swiper ('.swiper-container', {
         invert: false,
       },
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  })
+  });
 
-  mySwiper.pagination.bullets[1]
+
 function owlCarouselSlider(owlSlider) {
 
     if ($(owlSlider).length > 0) {
@@ -48,6 +44,8 @@ function owlCarouselSlider(owlSlider) {
             slideBy: 1,
             items: 1,
             lazyLoad: true,
+            onInitialized : pagen,
+            onChange: counter,
             responsive: {
                 310: {
                     items: 1
@@ -75,6 +73,24 @@ function owlCarouselSlider(owlSlider) {
             }
         });
 
+    function pagen(event){
+            
+            $('.owl-prev').after("<div class='slider-pagen d-flex'>1/" + event.item.count+"</div>");
+            
+    }
+
+    function counter(event) {
+        
+         var items     = event.item.count;     // Number of items
+         var item      = event.item.index;     // Position of the current item
+       
+       // it loop is true then reset counter from 1
+       if(item > items) {
+        item = item - items;
+      }
+       $('.slider-pagen').html(item+"/"+items);
+     }
+    
     }
 
 }
@@ -95,11 +111,11 @@ function owlCarouselSliderProd(owlSlider) {
             lazyLoad: true,
             responsive: {
                 310: {
-                    items: 3
+                    items: 1
                 },
 
                 480: {
-                    items: 3
+                    items: 2
                 },
 
                 767: {
@@ -107,14 +123,14 @@ function owlCarouselSliderProd(owlSlider) {
                 },
 
                 989: {
+                    items: 2
+                },
+
+                1321: {
                     items: 3
                 },
 
-                1280: {
-                    items: 3
-                },
-
-                1300: {
+                1920: {
                     items: 3
                 }
             }
