@@ -453,6 +453,7 @@ li {
     transition-duration: .2s;
     cursor: pointer;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .btn-xs {
@@ -825,6 +826,14 @@ li {
     &__bottom {
         margin: 43px 0px 0px;
     }
+
+    & .btn{
+        max-height: 60px;
+        text-align: center;
+        width: 220px;
+        padding: 22px 0;
+        margin-right: 17px;
+    }
 }
 
 // feedback
@@ -1179,7 +1188,9 @@ li {
         margin-bottom: 45px;
     }
     &__sloution-btn{
-       
+       width: 220px;
+       padding: 18px 0;
+       text-align: center;
     }
 }
 .btn-nobg{
@@ -1327,6 +1338,7 @@ li {
         right: 260px;
         position: absolute;
         bottom: -75px;
+        z-index: 10;
     
         &-list{
             text-align: center;
@@ -1392,9 +1404,17 @@ li {
 .solutions{
 
     background-color:white;
-    max-width: 1600px;
-    padding: 60px 40px 55px 120px;
+    max-width: 100%;
+    padding: 60px 0px 55px 0px;
     margin: 0 auto;
+    &__h2{
+        margin-bottom: 25px;
+    }
+    &__wrapper{
+        max-width: 1475px;
+        padding-left: 35px;
+        margin: 0 auto;
+    }
     &__list{
         flex-wrap: wrap;
         flex-basis: 683px;
@@ -1425,7 +1445,7 @@ li {
 
         &-a{
             font-size: 14px;
-          
+            margin-top: 23px;
             text-transform: uppercase;
             font-weight: bold;
             &::after{
@@ -1515,7 +1535,7 @@ li {
             font-size: 18px;
             line-height: 30px;
             font-weight: 300;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     }
     &__button{
@@ -1584,7 +1604,10 @@ li {
     background-image: url(../img/catalog/main-banner.jpg);
     height: 572px;
     padding: 115px 125px 70px 125px;
-
+    &__tetle{
+        margin-top: 22px;
+    margin-bottom: 22px;
+    }
     &__text{
         color: white;
         margin-bottom: 55px;
@@ -1679,6 +1702,7 @@ li {
     max-width: 1560px;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin:  0 auto !important;
 
     &__item{
         max-width: 500px;
@@ -1839,7 +1863,7 @@ li {
                 flex-basis: 315px;
                 &-text{
                     position: absolute;
-                    font-size: 16px;
+                    font-size: 18px;
                     top:53px;
                     left: 65px;
                     color: white;
@@ -1891,7 +1915,9 @@ li {
 /*advantages*/
 
 .adw{
-
+    &_product{
+        margin-top: 50px;
+    }
     background-image:url(../img/adw-banner.jpg);
     background-position:center;
     background-size:cover;
@@ -1932,6 +1958,7 @@ li {
         color: white;
         font-size: 13px;
         font-weight: bold;
+        padding: 23px 70px;
     }
 
     &__list{
@@ -1962,12 +1989,12 @@ li {
 
 .contacts{
     &__title{
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         margin-left: 20px;
     }
 
     &__label{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &__adress{
         margin-right: 180px;
@@ -2059,7 +2086,7 @@ li {
         max-width: 400px;
         background-color: #b4e13d;
         padding: 22px 10px 26px 40px;
-        margin-top: -100px;
+        margin-top: -90px;
 
     }
 
@@ -2096,16 +2123,25 @@ li {
             margin-top: 5px;
         }
     }
+
+    &__form-btn{
+        width: 100%;
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
 }
 
 /*product*/
 
 .product{
-    max-width: 1180px;
+    max-width: 1160px;
     margin-top: 20px;
+    margin-left: 10px;
 
     &__slider{
-        padding-left: 20px;
+        
     
         &-list{
             position: relative;
@@ -2130,7 +2166,7 @@ li {
     
             & .owl-nav{
                 justify-content: center;
-                bottom:30px;
+                bottom:0px;
                 display: flex;
                 position: absolute;
                 top:auto;
@@ -2164,7 +2200,7 @@ li {
     }
     
     &__carusel{
-        padding-left: 20px;
+        
         margin-top: 25px;
 
         &-list{
@@ -2206,7 +2242,7 @@ li {
 }
 
 .product__features{
-    padding: 40px 100px 45px 80px;
+    padding: 40px 100px 45px 60px;
 
     &-text{
         line-height: 30px;
@@ -2348,7 +2384,7 @@ li {
 
 .product-info{
     margin-left: 20px;
-    max-width: 380px;
+    width: 380px;
     margin-top: 20px;
     max-height: 500px;
 
@@ -2404,6 +2440,8 @@ li {
         font-size: 13px;
         font-weight: bold;
         width: 100%;
+        padding-top: 21px;
+        padding-bottom: 21px;
     }
 
     &__bottom{
@@ -2942,11 +2980,27 @@ li {
             border-bottom: 2px solid #021a76;
             font-weight: bold;
             margin-bottom: 25px;
-            margin-top: 20px;
+            margin-top: 4px;
         }
         &__text-container{
-            max-height: 316px;
+            max-height: 331px;
             overflow: hidden;
+            position: relative;
+            z-index: 0;
+            
+
+            &::after{
+                content:"";
+                width:100%;
+                position:absolute;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(242,242,242,0) 100%, rgba(242,242,242,1) 100%);
+                display: block;
+                background: linear-gradient(0deg,rgb(242, 242, 242) 1%,#f2f2f200 30%);
+                z-index: 1;
+                bottom: 0px;
+                left: 0px;
+            }
         }
 
         &__text_left{
@@ -3040,12 +3094,12 @@ li {
 
   @media (max-width: 1000px){
 
-    .page-banner__h1 {
+    .page-banner__h1, .page-banner__p {
         max-width: 748px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .page-banner__p{
-        max-width: 748px;
-    }
+    
 
     .prod-quote__container{
         max-width: 630px;
@@ -3060,9 +3114,181 @@ li {
 
     .prod-content{
         max-width: 748px;
+        padding: 30px 0px;
 
         &__img{
             max-width: 364px;
         }
+
+        &__text{
+            flex-basis: 384px;
+        }
+
+        &__stat-text{
+            font-size: 13px;
+        }
+
+        &__equipment{
+            flex-direction: column;
+
+            &-item{
+                flex-basis:auto;
+                margin-bottom: 12px;
+            }
+
+            &-list-item{
+                margin-top: 13px;
+            }
+        }
+        &__h2{
+            margin-bottom: 16px;
+        }
+    }
+    .text-contianer_min{
+        max-height: 226px
+    }
+
+    .solutions{
+        max-width: 748px;
+    }
+
+    .prod-slider{
+        max-width: 469px;
+        padding-left: 0px;
+        padding-right: 0px;
+        
+    }
+    .prod-slider__img {
+        max-width: 500px;
+    }
+
+    .stepper{
+        flex-direction: column;
+        max-width: 768px;
+        padding: 30px 0;
+        &__header, &__list-item{
+            max-width: 555px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__list-item{
+            
+
+            &-text{
+                margin-bottom: 6px;
+            }
+        }
+
+        &__last-step{
+            flex-direction: column;
+        align-items: flex-start;
+        border-left: none;
+        &-text{
+            max-width: 6500px;
+        }
+        }
+    }
+
+    .prod-vacancy{
+        flex-direction: column;
+        max-width: 748px;
+        align-items: center;
+        padding: 80px 0px 40px 0px;
+
+        &__info{
+            max-width:748px;
+            align-items: center;
+            padding: 35px 50px 90px 359px;
+        }
+
+        &__form{
+            margin-top: 20px;
+        }
+
+        &__form-grid{
+            margin-top: 20px;
+        }
+    }
+  }
+
+  @media(max-width: 768px){
+
+    .prod_container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .page-banner_prod{
+        padding: 35px 0;
+    }
+    .page-banner__h1{
+        font-size: 20px
+    }
+    .page-banner__p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .prod-quote__text{font-size: 22px;
+    &::before{
+        left: -23px;
+    }
+
+    }
+
+    .prod-quote__container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .prod-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .prod-content__img {
+        max-width: 560px;
+        order: 2;
+        margin: 30px auto 0;
+
+    }
+    
+    .prod-content{
+        &__stat-list{
+            flex-direction: column;
+        }
+
+        &__stat-item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-basis: auto !important;
+        }
+        &__stat-num{
+            margin-right: 10px;
+        }
+
+        &__stat-text{
+            font-size: 14px;
+        }
+        &__equipment-list{
+            max-width:320px;
+
+            &-item{
+                max-width: 90px
+            }
+        }
+
+        &__text{
+            padding: 0;
+        }
+
+        &__h2{
+            font-size: 20px;
+        }
+    }
+    
+    .prod-content__text{
+        flex-basis: auto;
+
+        & br{display: none;}
     }
   }

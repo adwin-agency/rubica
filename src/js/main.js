@@ -115,14 +115,14 @@ function owlCarouselSliderProd(owlSlider) {
                 },
 
                 480: {
-                    items: 2
+                    items: 1
                 },
 
                 767: {
-                    items: 3
+                    items: 1
                 },
 
-                989: {
+                1001: {
                     items: 2
                 },
 
