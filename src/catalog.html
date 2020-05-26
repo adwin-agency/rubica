@@ -1,7 +1,8 @@
 //= template/header.html
-<main class="main">
-<div class="container">
+
+
     <div class="banner-catalog page-banner">
+        <div class="banner-catalog__container">
         <p class="banner-catalog__label slides__label">Кухни от производителя</p>
         <h1 class="banner-catalog__title title_color-white">Скидка 30% на кухни <br>до 29 апреля</h1>
         <p class="banner-catalog__text">Изготовим и доставим в срок или бесплатно</p>
@@ -41,8 +42,9 @@
                 </li>
             </ul>
         </div>
+        </div>
     </div>
-
+    <div class="container catalog_container">
     <div class="filter d-flex">
         <p class="filter__title">Фильтр:</p>
         <ul class="filter__list d-flex">
@@ -240,7 +242,7 @@
                     <img src="img/icons/emoji_happy_circle.svg"/>
                 </div>
                 <p class="goods-features__item-text">
-                    Выезд дизайнера и 3д-проект <br>бесплатно
+                    Выезд дизайнера и 3д-проект бесплатно
                 </p>
             </li>
             <li class="goods-features__item d-flex">
@@ -256,7 +258,7 @@
                     <img src="img/icons/home.svg"/>
                 </div>
                 <p class="goods-features__item-text">
-                    Сборка и установка <br>в один день
+                    Сборка и установка в один день
                 </p>
             </li>
             <li class="goods-features__item d-flex">
@@ -574,9 +576,11 @@
         </ul>
     </section>
 
-    <section class="adw d-flex">
+    <section class="adw">
+        <h2 class="adw__header">Наши преимущества</h2>
+        <div class="adw__wrapper d-flex">
         <div class="adw__text">
-            <h2 class="adw__header">Наши преимущества</h2>
+            
             <p class="adw__callback-text d-flex">Вызовите дизайнера-замерщика <br>бесплатно</p>
             <button tupe="button" class="adw__callback-btn btn btn-bg-red">Вызвать дизайнера</button>
         </div>
@@ -624,9 +628,10 @@
                 <p class="adw__list-item-text">Доставим и соберем в один день. Сборку и установку производят опытные мастера</p>
             </li>
         </ul>
+    </div>
     </section>
 
 </div>
 
-</main>
+
 //= template/footer.html
