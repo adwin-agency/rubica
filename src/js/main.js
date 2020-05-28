@@ -214,29 +214,7 @@ function owlCarouselSliderideas(owlSlider) {
      $('.ideas__layout-list').removeClass('ideas-lockers-js');
      }
      }).trigger('resize');
-//кнопка развернуть-свернуть в ideas   
 
-var more = document.querySelectorAll(".prod-content__text-more");
-var cont = document.querySelectorAll(".prod-content__text-container");
-var ideas = document.getElementById('target-js');
-     
-    ideas.addEventListener('click', function(event){
-        target = event.target;
-
-        for (var i=0; i<more.length; i++){
-            if (target == more[i]){
-                if (cont[i].classList.contains('prod-content__text-container-active')){
-                    cont[i].classList.remove('prod-content__text-container-active');
-                    target.innerHTML = 'развернуть';
-
-                }
-                else {
-                    cont[i].classList.add('prod-content__text-container-active');
-                    target.innerHTML = 'Свернуть';
-                }
-            }
-        }
-    } );
 
 
 function owlCarouselSliderProduct(owlSlider) {
@@ -400,6 +378,30 @@ $(function() {
 
 
 jQuery( document ).ready(function( $ ) {
+
+        //кнопка развернуть-свернуть в ideas   
+
+var more = document.querySelectorAll(".prod-content__text-more");
+var cont = document.querySelectorAll(".prod-content__text-container");
+var ideas = document.getElementById('target-js');
+     
+    ideas.addEventListener('click', function(event){
+        target = event.target;
+
+        for (var i=0; i<more.length; i++){
+            if (target == more[i]){
+                if (cont[i].classList.contains('prod-content__text-container-active')){
+                    cont[i].classList.remove('prod-content__text-container-active');
+                    target.innerHTML = 'развернуть';
+
+                }
+                else {
+                    cont[i].classList.add('prod-content__text-container-active');
+                    target.innerHTML = 'Свернуть';
+                }
+            }
+        }
+    } );
     var
    
       $window = $( window ), 
@@ -452,4 +454,6 @@ jQuery( document ).ready(function( $ ) {
         } );
       }
     });
+
+
 });   

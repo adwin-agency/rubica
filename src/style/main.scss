@@ -1731,12 +1731,18 @@ li {
             position: absolute;
             top: 20px;
             right: 16px;
-            font-size: 57px;
+            
             font-weight: normal;
             background-size: cover;
-            color:white;
+            
             padding: 10px;
             font-family: 'BalloonExtra-Bold';
+
+            &-span{
+                color:white;
+                font-size: 48px;
+                transform: rotate(-3deg);
+            }
         }
 
         &-desc{
@@ -2960,6 +2966,10 @@ li {
     }
     .goods__item{
         max-width: 400px;
+
+        &-offer-span{
+            font-size: 37px;
+        }
     }
     .goods__item-slider{
         max-height: 320px;
@@ -3723,6 +3733,10 @@ li {
     .goods__item{
         max-width: 600px;
         margin-bottom: 20px;
+
+        &-offer-span{
+            font-size: 48px;
+        }
     }
     .goods__item-prices-price{
         font-size: 31px;
@@ -4113,6 +4127,13 @@ li {
     .goods__item{
         max-width: 320px;
         width: 100%;
+       
+    
+            &-offer-span{
+                font-size: 28px;
+            }
+            &-offer{padding: 5px;}
+        
     }
     .goods__item .owl-dots{display: none;}
     .goods__item-slider {
