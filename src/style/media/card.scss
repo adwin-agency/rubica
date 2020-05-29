@@ -1,0 +1,187 @@
+//card
+@media screen and (max-width: 1599px) {
+    .product-info {
+        flex-shrink: 0;
+    }
+    .product {
+        margin-left: 0;
+    }
+    .product-container {
+        width: 1300px;
+        margin: 0 auto;
+    }
+    .product {
+        max-width: 950px;
+        &__solutions {
+            flex-direction: column;
+            padding-left: 0;
+            &-content {
+                justify-content: flex-start;
+                flex: 1 0 auto;
+                padding: 35px 65px 30px;
+            }
+            &-list {
+                flex-direction: row;
+            }
+        }
+        &__parts {
+            padding-left: 0;
+            &-list-item {
+                max-width: 300px;
+            }
+        }
+        &-info {
+            width: 330px;
+            &__header {
+                font-size: rem(34px);
+                line-height: 1;
+                margin-left: 0;
+            }
+            &__price {
+                font-size: rem(40px);
+                margin-left: 0;
+            }
+            &__text {
+                margin-left: 0;
+            }
+            &__old-price {
+                font-size: rem(24px);
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            &__discount {
+                font-size: rem(25px);
+            }
+            &__offer {
+                margin-left: 0;
+            }
+            &__top {
+                padding: 25px 25px 20px;
+            }
+            &__btn {
+                padding: 21px 10px;
+            }
+        }
+        &__carusel {
+            margin-top: 10px;
+        }
+        &__features {
+            padding: 35px 20px 0px 5px;
+        }
+        &-info {
+            margin-left: 0;
+        }
+        &__about {
+            &-info {
+                margin-right: auto;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    }
+    .stepper {
+        padding: 0px 10px;
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .product {
+        max-width: 100%;
+        &__slider {
+            order: -1;
+        }
+        &__parts {
+            &-col {
+                margin-bottom: 10px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+    .product__parts-list-item {
+        padding: 20px 30px 15px;
+    }
+    .product .product__parts-list {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    .product-main {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-container {
+        width: 787px;
+        margin: 0 auto;
+    }
+    .thumbs {
+        display: none;
+    }
+    .product-info .sticky {
+        position: static;
+    }
+    .product-info > .fixed-div {
+        display: flex;
+    }
+    .product-info {
+        margin: 0px;
+        display: flex;
+        width: 100%;
+        &__top {
+            flex: 1 0 auto;
+            max-width: 440px;
+        }
+        &__bottom {
+            flex: 1 1;
+        }
+        &__wrapper {
+            position: relative;
+            align-items: flex-end;
+            display: flex;
+        }
+        &__btn {
+            max-width: 280px;
+            font-size: 13px;
+        }
+        &__discount {
+            font-size: rem(20px);
+            margin-right: 5px;
+            position: absolute;
+            top: -10px;
+        }
+        &__top {
+            padding: 10px 50px 23px;
+        }
+        &__old {
+            &-price {
+                font-size: rem(20px);
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-end;
+            }
+        }
+        &__header {
+            margin: 0;
+            line-height: normal;
+            font-size: rem(34px);
+        }
+    }
+
+    .product__solutions-content{
+        padding: 40px 15px 15px;
+    }
+
+    .adw {
+        height: auto;
+        &__text {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .thumbs {
+        display: none;
+    }
+}
