@@ -203,8 +203,24 @@ function owlCarouselSliderideas(owlSlider) {
         });
 
     }
-
+    
 }
+<<<<<<< HEAD
+=======
+//слайдер в ideas на маленьких экранах
+    $(window).on('resize', function(){
+     if($(window).width() <= 553) {
+     $('.ideas__lockers-list').addClass('ideas-lockers-js');
+     $('.ideas__layout-list').addClass('ideas-lockers-js');
+     }
+      else {
+     $('.ideas__lockers-list').removeClass('ideas-lockers-js');
+     $('.ideas__layout-list').removeClass('ideas-lockers-js');
+     }
+     }).trigger('resize');
+
+
+>>>>>>> origin/dev-dima
 
 function owlCarouselSliderProduct(owlSlider) {
 
@@ -659,3 +675,120 @@ $(function() {
     owlSliderWithThumbs('.product__item-slider-js', '.product__carusel-list');
 
 });
+<<<<<<< HEAD
+=======
+
+
+jQuery( document ).ready(function( $ ) {
+
+
+     //popup форма
+
+     var callback = document.querySelectorAll('.callback-js'),
+        popup = document.querySelector('.popup-container'),
+        close = document.querySelector('.popup__close-btn');
+ 
+        document.addEventListener('click', function(event){
+
+            target=event.target;
+
+            for (var i=0 ; i<callback.length; i++){
+
+                if (target == callback[i]){
+
+                    popup.classList.add('popup-container_active');
+
+                }
+
+                if (target == close) {
+                    popup.classList.remove('popup-container_active');
+                }
+            }
+             
+             
+        });
+
+        
+
+        //кнопка развернуть-свернуть в ideas   
+
+var more = document.querySelectorAll(".prod-content__text-more"),
+    cont = document.querySelectorAll(".prod-content__text-container"),
+    ideas = document.getElementById('target-js');
+     
+    ideas.addEventListener('click', function(event){
+        target = event.target;
+
+        for (var i=0; i < more.length; i++){
+            if (target == more[i]){
+                if (cont[i].classList.contains('prod-content__text-container-active')){
+                    cont[i].classList.remove('prod-content__text-container-active');
+                    target.innerHTML = 'Развернуть';
+
+                }
+                else {
+                    cont[i].classList.add('prod-content__text-container-active');
+                    target.innerHTML = 'Свернуть';
+                }
+            }
+        }
+    } );
+
+   
+    //залипание при скролле
+    var
+   
+      $window = $( window ), 
+ 
+      $target = $( "#fixed-scroll-js" ),
+ 
+      $bottom = $( '#end-scroll-js' ), 
+ 
+      $top = $target.offset().top, 
+ 
+      $height = $target.outerHeight(), 
+
+        $left = $('.product').offset().left + $('.product').outerWidth(),
+
+       $bot = $bottom.offset().top + $bottom.outerHeight();
+       
+   
+    $window.on('scroll', function() {
+   
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > $top  && scrollTop + $height < $bot) {
+   
+        
+        $target.css( {     
+            position : 'fixed',
+            top : '10px',     
+            left : $left + 'px',
+        } );
+    } 
+
+        else if ( scrollTop > $top && scrollTop + $height > $bot ) {
+ 
+            // Координата верха: куда нельзя заходить - минус верх - минус высота блока
+            var top = $bot - scrollTop - $height;
+ 
+            $target.css( {
+                
+                top : top ,
+            } );
+        }
+   
+      // Иначе возвращаем всё назад
+      else {     
+   
+        $target.css( {     
+            position : 'relative',
+            top : '',     
+            left : '',
+        } );
+      }
+    });
+
+
+});   
+>>>>>>> origin/dev-dima

@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'BalloonExtra-Bold';
+    src: url('../fonts/Balloon-SCExtraBold.otf'), url('../fonts/BalloonExtra-Bold.eot') format('embedded-opentype'), url('../fonts/BalloonExtra-Bold.ttf')  format('truetype');;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+@font-face {
     font-family: 'Geometria';
     src: url('../fonts/Geometria-Thin.eot');
     src: local('../fonts/Geometria Thin'), local('Geometria-Thin'),
