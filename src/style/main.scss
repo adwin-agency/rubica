@@ -4446,3 +4446,11 @@ li {
         max-width: 100%;
     }
 }
+
+@media (max-width: 400px) {
+    .popup {
+        height: 100%;
+        margin-top: 0px;
+        max-width: 100%;
+    }
+}
