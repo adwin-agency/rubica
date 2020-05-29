@@ -379,20 +379,49 @@ $(function() {
 
 jQuery( document ).ready(function( $ ) {
 
+
+     //popup форма
+
+     var callback = document.querySelectorAll('.callback-js'),
+        popup = document.querySelector('.popup-container'),
+        close = document.querySelector('.popup__close-btn');
+ 
+        document.addEventListener('click', function(event){
+
+            target=event.target;
+
+            for (var i=0 ; i<callback.length; i++){
+
+                if (target == callback[i]){
+
+                    popup.classList.add('popup-container_active');
+
+                }
+
+                if (target == close) {
+                    popup.classList.remove('popup-container_active');
+                }
+            }
+             
+             
+        });
+
+        
+
         //кнопка развернуть-свернуть в ideas   
 
-var more = document.querySelectorAll(".prod-content__text-more");
-var cont = document.querySelectorAll(".prod-content__text-container");
-var ideas = document.getElementById('target-js');
+var more = document.querySelectorAll(".prod-content__text-more"),
+    cont = document.querySelectorAll(".prod-content__text-container"),
+    ideas = document.getElementById('target-js');
      
     ideas.addEventListener('click', function(event){
         target = event.target;
 
-        for (var i=0; i<more.length; i++){
+        for (var i=0; i < more.length; i++){
             if (target == more[i]){
                 if (cont[i].classList.contains('prod-content__text-container-active')){
                     cont[i].classList.remove('prod-content__text-container-active');
-                    target.innerHTML = 'развернуть';
+                    target.innerHTML = 'Развернуть';
 
                 }
                 else {
@@ -402,6 +431,9 @@ var ideas = document.getElementById('target-js');
             }
         }
     } );
+
+   
+    //залипание при скролле
     var
    
       $window = $( window ), 

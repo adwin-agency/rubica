@@ -52,35 +52,30 @@
                 </div>
             </div>
         </header>
-<main class="main">
-<div class="container delivery-container">
-    <section class="delivery">
-        <div class="delivery__banner page-banner">
-            <h1 class=delivery__banner-header>Доставка<span>&</span>Монтаж</h1>
-        </div>
-        <div class="delivery__info">
-            <ul class="delivery__info-list d-flex">
-                <li class="delivery__info-item delivery__info-item_bg-blue">
-                    <h2 class="delivery__info-item-header">Доставка</h2>
-                    <p class="delivery__info-item-text">Через 30 дней после заключения договора кухня будет готова. Вам не придется 
-                        за ней ехать и мучиться со сборкой, мы сами доставим кухню в удобное для вас место и время по предварительному 
-                        согласованию.</p>
-                    <p class="delivery__info-item-text">Стоимость доставки расчитывается индивидуально, её вам подскажет 
-                        наш оператор по телефону <br> <a class="delivery__info-item-link" href="tel:+7(812)319-36-65">+7(812)319-36-65</a></p>
-                </li>
-                
-                <li class="delivery__info-item delivery__info-item_bg-white">
-                    <h2 class="delivery__info-item-header">Монтаж</h2>
-                    <p class="delivery__info-item-text">Наши мастера бережно поднимут кухню на этаж и соберут всего 
-                        за несколько часов с подведением электроники и водопровода. А после — никакой пыли.</p>
-                    <p class="delivery__info-item-text"><b>Стоимость сборки фиксированная и составляет 10% от стоимости гарнитура.</b></p>
-                </li>
-            </ul>
-        </div>
-        </section>
 
+<div class="popup-container">
+    <div class="popup">
+        <button class="popup__close-btn"></button>
+        <form class="form">
+            <h3 class="popup__title form__title">Обратный звонок</h3>
+            <div class="popup__grid form__grid row d-flex wrap">
+                <div class="form__group form__group_large col">
+                    <input type="text" class="form__element form__input" placeholder="Представьтесь (необязательно)">
+                </div>
+                <div class="form__group form__group_large col">
+                    <input type="tel" class="form__element form__input" placeholder="Контактный телефон">
+                </div>
+                <div class="form__group form__group_large col">
+                    <input type="text" class="form__element form__input" placeholder="Удобное время для звонка">
+                </div>
+            </div>
+            <button type="submit" class="popup__send-btn form__btn btn btn-bg btn-bg-blue">Перезвоните мне</button>
+            <p class="form__term term">Нажимая кнопку «Перезвоните мне», вы соглашаетесь с <a href="#" class="term__link">Политикой конфиденциальности</a></p>
+        </form>
+    </div>
 </div>
-</main>
+
+<button type="button" class="btn btn-bg-blue" id="callback-js">попап откройся</button>
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__top d-flex">
